@@ -443,10 +443,15 @@
 			//console.log("Gauge = ", $('#chart_div > svg > g > text:first');
 		//$('#chart_div svg g text:first').attr('y', 210);
 			}
-			function getSelect{
-				google.visualization.events.addListener(chart, 'select', function() {
-                    console.log("Here");
-                });	
+			google.visualization.events.addListener(chart,'select',getselect);
+
+    function getselect(){
+        var selectedItem = chart.getChart().getSelection()[0];
+        alert(selectedItem.row);
+    }	
+
+				
+
 			}
 		}
 	}
