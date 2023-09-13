@@ -336,7 +336,7 @@
 			</style> 
 			<div id="title"></div>
 			<div id="subtitle"></div>
-			<div id="chart_div" onclick="getselect([0])"></div>
+			<div id="chart_div"></div>
 		`;
 
 	class GoogleGauge extends HTMLElement {
@@ -443,16 +443,13 @@
 			//console.log("Gauge = ", $('#chart_div > svg > g > text:first');
 		//$('#chart_div svg g text:first').attr('y', 210);
 			}
-			google.visualization.events.addListener(chart,'select',getselect());
+			google.visualization.events.addListener(chart,'select',getselect);
 
     function getselect(e){
     var selectedItem = chart.getChart().getSelection()[0];
     var true_selected =  chart.getDataTable().getTableRowIndex(selectedItem.row)
     return true_selected;
-}	
-
-				
-
+}
 			}
 		}
 	}
