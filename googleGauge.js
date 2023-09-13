@@ -445,10 +445,11 @@
 			}
 			google.visualization.events.addListener(chart,'select',getselect());
 
-    function getselect(){
-        var selectedItem = chart.getChart().getSelection();
-        return selectedItem;
-    }	
+    function getselect(e){
+    var selectedItem = chart.getChart().getSelection()[0];
+    var true_selected =  chart.getDataTable().getTableRowIndex(selectedItem.row)
+    return true_selected;
+}	
 
 				
 
