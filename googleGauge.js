@@ -438,15 +438,15 @@
 					//td[i].setAttribute("style","paddingBottom:10px");
 					td[i].style.padding = "10px";
 				}
-
-				google.visualization.events.addListener(chart, 'select', function() {
-                    alert("Here");
-                });
-
-					
+	
         //$("svg > g > text:first").attr("y", 400);
 			//console.log("Gauge = ", $('#chart_div > svg > g > text:first');
 		//$('#chart_div svg g text:first').attr('y', 210);
+			}
+			function getSelect{
+				google.visualization.events.addListener(chart, 'select', function() {
+                    console.log("Here");
+                });	
 			}
 		}
 	}
