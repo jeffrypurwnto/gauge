@@ -440,7 +440,7 @@
 				}
 
 				google.visualization.events.addListener(chart, 'select', function() {
-					console.log(chart.getSelection());
+					console.log('Clicked');
 				  });
 
 					
