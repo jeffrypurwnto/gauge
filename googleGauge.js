@@ -336,7 +336,7 @@
 			</style> 
 			<div id="title"></div>
 			<div id="subtitle"></div>
-			<div id="chart_div" onclick="alert('here');"></div>
+			<div id="chart_div" onclick="getselect([0])"></div>
 		`;
 
 	class GoogleGauge extends HTMLElement {
