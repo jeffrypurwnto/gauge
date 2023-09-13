@@ -446,7 +446,7 @@
 			google.visualization.events.addListener(chart,'select',getselect);
 
     function getselect(){
-        var selectedItem = chart.getChart().getSelection()[0];
+        var selectedItem = chart.getChart().getSelection();
         return selectedItem.row;
     }	
 
