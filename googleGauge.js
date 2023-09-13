@@ -447,7 +447,7 @@
 
     function getselect(){
         var selectedItem = chart.getChart().getSelection();
-        return selectedItem.row;
+        return selectedItem;
     }	
 
 				
