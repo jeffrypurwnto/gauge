@@ -336,7 +336,7 @@
 			</style> 
 			<div id="title"></div>
 			<div id="subtitle"></div>
-			<div id="chart_div"></div>
+			<div id="chart_div" onclick="alert('here');"></div>
 		`;
 
 	class GoogleGauge extends HTMLElement {
@@ -440,8 +440,8 @@
 				}
 
 				google.visualization.events.addListener(chart, 'select', function() {
-					console.log('Clicked');
-				  });
+                    alert("Here");
+                });
 
 					
         //$("svg > g > text:first").attr("y", 400);
