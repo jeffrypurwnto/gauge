@@ -443,13 +443,13 @@
 			//console.log("Gauge = ", $('#chart_div > svg > g > text:first');
 		//$('#chart_div svg g text:first').attr('y', 210);
 			}
-			google.visualization.events.addListener(chart,'select',getselect);
-
-    function getselect(e){
-    var selectedItem = chart.getChart().getSelection()[0];
-    var true_selected =  chart.getDataTable().getTableRowIndex(selectedItem.row)
-    return true_selected;
-}
+			$("#test").click(function(){
+			        alert("Click");
+			        var date = dataTable.getValue(0, 1);
+			        dataTable.setValue(0, 1, date); 
+			        chart.draw(dataTable, options);
+			    });
+			
 			}
 		}
 	}
