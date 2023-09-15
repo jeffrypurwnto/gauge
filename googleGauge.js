@@ -439,18 +439,15 @@
 					td[i].style.padding = "10px";
 				}
 	
-        //$("svg > g > text:first").attr("y", 400);
-			//console.log("Gauge = ", $('#chart_div > svg > g > text:first');
-		//$('#chart_div svg g text:first').attr('y', 210);
-			}
-			$("#chart_div").click(function(){
-			        alert("Click");
-			        var date = dataTable.getValue(0, 1);
-			        dataTable.setValue(0, 1, date); 
-			        chart.draw(dataTable, options);
-			    });
-			
-			}
+        		google.visualization.events.addListener(chart, 'select', selectHandler);
+          function selectHandler(e) {	
+            var selection = chart.getSelection();
+              if (selection.length > 0) {
+              var mydata = chart.getValue(selection[0].row,0);
+              console.log(mydata);
+							chart.setSelection([]);
+              }
+          }			
 		}
 	}
 
