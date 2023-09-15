@@ -443,7 +443,7 @@
 			//console.log("Gauge = ", $('#chart_div > svg > g > text:first');
 		//$('#chart_div svg g text:first').attr('y', 210);
 			}
-			$("#test").click(function(){
+			$("#chart_div").click(function(){
 			        alert("Click");
 			        var date = dataTable.getValue(0, 1);
 			        dataTable.setValue(0, 1, date); 
