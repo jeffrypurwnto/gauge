@@ -439,13 +439,13 @@
 					td[i].style.padding = "10px";
 				}
 	
-        		google.visualization.events.addListener(chart, 'select', selectHandler);
+        		google.visualization.events.addListener(svg, 'select', selectHandler);
           function selectHandler(e) {	
             var selection = chart.getSelection();
               if (selection.length > 0) {
-              var mydata = chart.getValue(selection[0].row,0);
+              var mydata = svg.getValue(selection[0].row,0);
               console.log(mydata);
-							chart.setSelection([]);
+							svg.setSelection([]);
               }
           }			
 		}
