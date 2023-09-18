@@ -336,7 +336,7 @@
 			</style> 
 			<div id="title"></div>
 			<div id="subtitle"></div>
-			<div id="chart_div"></div>
+			<div id="chart_div" onClick="getSelect()"></div>
 		`;
 
 	class GoogleGauge extends HTMLElement {
@@ -438,16 +438,20 @@
 					//td[i].setAttribute("style","paddingBottom:10px");
 					td[i].style.padding = "10px";
 				}
-	
-        		google.visualization.events.addListener(svg, 'select', selectHandler);
-          function selectHandler(e) {	
-            var selection = chart.getSelection();
-              if (selection.length > 0) {
-              var mydata = svg.getValue(selection[0].row,0);
-              console.log(mydata);
-							svg.setSelection([]);
-              }
-          }			
+				//g[0].height = 210;
+        //$("svg > g > text:first").attr("y", 400);
+			//console.log("Gauge = ", $('#chart_div > svg > g > text:first');
+		//$('#chart_div svg g text:first').attr('y', 210);
+			}
+
+			function getSelect(){
+				google.visualization.events.addListener(ctx,'select',selectData);
+				var selectedItem = ctx.getSelection()[0];
+					if (selectedItem) {
+					var value = ctx.getValue(selectedItem.row,0);
+					alert('The user selected ' + value);
+					}
+			}
 		}
 	}
 
