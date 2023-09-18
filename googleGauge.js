@@ -449,7 +449,7 @@
 				var selectedItem = ctx.getSelection()[0];
 					if (selectedItem) {
 					var value = ctx.getValue(selectedItem.row,0);
-						return this.value;
+						return value;
 					}
 			}
 		}
